@@ -1,0 +1,57 @@
+:root {
+      --bg-gradient: linear-gradient(135deg, #0D0026, #1D003B);
+      --card-gradient: linear-gradient(180deg, #701F6B 0%, #C71F75 100%);
+      --purple-dark: #360640;
+      --purple-mid: #4B2D5E;
+      --pink: #C71F75;
+      --input-bg: #FFFFFF;
+      --btn-bg: #1B1B1B;
+      --btn-text: #FFFFFF;
+      --progress-bg: #360640;
+      --avatar-bg: #E0E0E0;
+      --avatar-inner: #B0B0B0;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: var(--bg-gradient);
+      color: #FFF;
+      min-height: 100vh;
+      text-shadow: 0 0 2px rgba(0,0,0,0.5);
+    }
+
+    a { 
+        text-decoration: none; color: inherit; }
+
+    a:focus, button:focus, input:focus { 
+        outline: 2px solid #FFF; }
+
+    .login-screen { 
+        display: flex; justify-content: center; align-items: center; height: 100vh; }
+
+    .login-card { 
+        background: var(--card-gradient); border-radius: 20px; padding: 2.5rem 2rem; width: 360px; text-align: center; }
+
+    .login-card h1 { 
+        font-size: 2.5rem; font-weight: 700; margin-bottom: 2rem; }
+
+    .login-card label { 
+        display: block; font-size: 0.9rem; margin-bottom: 0.5rem; text-align: left; }
+
+    .login-card input { 
+        width: 100%; padding: 0.75rem 1rem; border: none; border-radius: 50px; font-size: 1rem; margin-bottom: 1.25rem; background: var(--input-bg); color: #000; }
+
+    .login-card button { 
+        width: 100%; padding: 0.75rem; border: none; border-radius: 50px; background: var(--btn-bg); color: var(--btn-text); font-size: 1rem; font-weight: 700; letter-spacing: 1px; cursor: pointer; margin-bottom: 1rem; }
+    
+    .login-card .register { 
+        display: inline-block; font-size: 0.95rem; font-weight: 400; }
+
+    .error { 
+        color: red; margin-top: 1rem; }
+
+    @media (max-width: 768px) { .login-card { width: 90%; padding: 1.5rem; } .login-card h1 { font-size: 2rem; } }
+
+    @media (max-width: 480px) { .login-card input, .login-card button { font-size: 0.9rem; } }

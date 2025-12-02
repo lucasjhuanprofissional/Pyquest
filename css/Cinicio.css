@@ -1,0 +1,121 @@
+    :root {
+      --bg-gradient: linear-gradient(135deg, #0D0026, #1D003B);
+      --card-gradient: linear-gradient(180deg, #701F6B 0%, #C71F75 100%);
+      --purple-dark: #360640;
+      --purple-mid: #4B2D5E;
+      --pink: #C71F75;
+      --input-bg: #FFFFFF;
+      --btn-bg: #1B1B1B;
+      --btn-text: #FFFFFF;
+      --progress-bg: #360640;
+      --avatar-bg: #E0E0E0;
+      --avatar-inner: #B0B0B0;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: var(--bg-gradient);
+      color: #FFF;
+      min-height: 100vh;
+      text-shadow: 0 0 2px rgba(0,0,0,0.5);
+    }
+
+    a { 
+        text-decoration: none; color: inherit; }
+
+    .module:focus { 
+        outline: 2px solid #FFF; }
+
+    .cert-button { 
+        margin-top: 2rem; padding: 1rem; background: gold; color: black; border-radius: 8px; cursor: pointer; text-align: center; }
+
+    .nav { 
+        display: flex; align-items: center; background: var(--pink); padding: 1rem 2rem; }
+
+    .nav .logo { 
+        font-size: 1.8rem; font-weight: 700; }
+
+    .nav ul { 
+        display: flex; list-style: none; margin-left: 2rem; gap: 1.5rem; }
+
+    .nav ul li a { 
+        font-size: 1rem; font-weight: 600; padding: 0.5rem 1rem; border-radius: 50px; transition: background 0.3s; }
+
+    .nav ul li a.active, .nav ul li a:hover { 
+        background: var(--purple-dark); }
+
+    .nav .user { 
+        margin-left: auto; display: flex; align-items: center; gap: 0.8rem; cursor: pointer; padding: 0.5rem 1rem; border-radius: 50px; transition: background 0.3s; }
+
+    .nav .user:hover { 
+        background: var(--purple-dark); }
+
+    .nav .user .avatar { 
+        width: 38px; height: 38px; background: var(--avatar-bg); border-radius: 50%; position: relative; }
+
+    .nav .user .avatar::after { 
+        content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 50%; height: 50%; background: var(--avatar-inner); border-radius: 50%; }
+    
+    .nav .user span { 
+        font-weight: 600; }
+
+    .modules-screen { 
+        display: flex; padding: 2rem; }
+
+    .sidebar { 
+        width: 280px; background: var(--pink); border-radius: 20px; padding: 2rem 1.5rem; }
+
+    .sidebar .avatar { 
+        width: 140px; height: 140px; background: var(--avatar-bg); border-radius: 50%; margin: auto; position: relative; }
+    
+    .sidebar .avatar::after { 
+        content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 50%; height: 50%; background: var(--avatar-inner); border-radius: 50%; }
+    
+    .sidebar h2 { 
+        text-align: center; margin: 1rem 0; font-weight: 700; font-size: 1.25rem; }
+    
+    .sidebar .info { 
+        background: var(--purple-dark); border-radius: 12px; height: 150px; margin-top: 1rem; }
+    
+    .sidebar .badges { 
+        margin-top: 1rem; text-align: center; }
+    
+    .sidebar .badge { 
+        background: gold; color: black; padding: 0.5rem; border-radius: 20px; margin: 0.5rem 0; display: block; }
+
+    
+    .main-content { 
+        flex: 1; padding-left: 2rem; }
+    
+    .main-content h1 { 
+        font-size: 2rem; font-weight: 700; margin-bottom: 1.5rem; }
+    
+    .grid {
+         display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+    
+    .module { 
+        display: flex; flex-direction: column; align-items: center; gap: 0.5rem; cursor: pointer; transition: transform 0.3s; }
+    
+    .module:hover { 
+        transform: scale(1.05); }
+    
+    .module .circle { 
+        width: 100px; height: 100px; border-radius: 50%; background: var(--purple-mid); display: flex; justify-content: center; align-items: center; position: relative; }
+    
+    .module .circle img { 
+        width: 48%; height: auto; }
+    
+    .module .label { 
+        font-size: 0.9rem; font-weight: 600; text-align: center; }
+    
+    .module.locked { 
+        opacity: 0.5; cursor: not-allowed; }
+    
+    .module.locked:hover { 
+        transform: none; }
+    
+    @media (max-width: 768px) { .modules-screen { flex-direction: column; } .sidebar { width: 100%; margin-bottom: 1rem; } .grid { grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); } }
+    
+    @media (max-width: 480px) { .module .circle { width: 60px; height: 60px; } .main-content h1 { font-size: 1.5rem; } }

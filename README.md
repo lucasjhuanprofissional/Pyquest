@@ -1,6 +1,6 @@
 🐍 PYQUEST — Plataforma Gamificada para Aprender Python
 
-Olá a todos! Nós somos alunos do DS (Desenvolvimento de Sistemas) e apresentamos o PYQUEST, uma plataforma gamificada criada para tornar o aprendizado da linguagem Python mais dinâmico, acessível e divertido.
+Olá a todos! Nós somos formados  do DS (Desenvolvimento de Sistemas) e apresentamos o PYQUEST, uma plataforma gamificada criada para tornar o aprendizado da linguagem Python mais dinâmico, acessível e divertido.
 
 🎯 Visão Geral
 
